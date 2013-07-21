@@ -1,0 +1,229 @@
+@mixin radius($radius) { 
+    -ms-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -webkit-border-radius: $radius;
+    border-radius: $radius;
+} 
+@mixin box-shadow($shadow...) {
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    box-shadow: $shadow;
+}
+@mixin gradients($first, $second) {
+    background-color: $first;
+    background-image: -o-linear-gradient(top, $first 0%, $second 100%);
+    background-image: -ms-linear-gradient(top, $first 0%, $second 100%);
+    background-image: -moz-linear-gradient(top,  $first,  $second);
+    background-image: -webkit-gradient(linear, left top, left bottom, from($first), to($second));
+    background-image: linear-gradient(top, $first 0%, $second 100%);
+}
+@mixin box-sizing($type: border-box) {
+    box-sizing: $type; 
+    -o-box-sizing: $type; 
+    -ms-box-sizing: $type;
+    -moz-box-sizing: $type;
+    -webkit-box-sizing: $type;
+}
+@mixin opacity($opac) {
+    filter: alpha(opacity=$opac * 100);
+    -ms-filter: alpha(opacity=$opac * 100);
+    -moz-opacity: $opac;
+    -webkit-opacity: $opac;
+    opacity: $opac;
+}
+@mixin transition($value) {
+    -o-transition: $value;
+    -moz-transition: $value;
+    -webkit-transition: $value;
+    transition: $value;
+}
+@mixin transition-dur($value) {
+    -o-transition-duration: $value;
+    -moz-transition-duration: $value;
+    -webkit-transition-duration: $value;
+    transition-duration: $value;
+}
+@mixin transition-del($value) {
+    -o-transition-delay: $value;
+    -moz-transition-delay: $value;
+    -webkit-transition-delay: $value;
+    transition-delay: $value;
+}
+@mixin rotate($deg, $orig: 50% 50%) {
+    -o-transform: rotate(#{$deg});
+    -o-transform-origin: $orig;
+    -ms-transform: rotate(#{$deg});
+    -ms-transform-origin: $orig;
+    -moz-transform: rotate(#{$deg});
+    -moz-transform-origin: $orig;
+    -webkit-transform: rotate(#{$deg});
+    -webkit-transform-origin: $orig;
+    transform: rotate(#{$deg});
+    transform-origin: $orig;
+}
+@mixin scale( $amount: 1.1) {
+    -o-transform: scale(#{$amount});
+    -ms-transform: scale(#{$amount});
+    -moz-transform: scale(#{$amount});
+    -webkit-transform: scale(#{$amount});
+    transform: scale(#{$amount});
+}
+@mixin animation($options) {
+    -ms-animation: $options;
+    -moz-animation: $options;
+    -webkit-animation: $options;
+    animation: $options;
+}
+@mixin placeholder($color) {
+    input::-webkit-input-placeholder, 
+    textarea::-webkit-input-placeholder,
+    input:-moz-placeholder, 
+    textarea:-moz-placeholder,
+    input:-ms-input-placeholder, 
+    textarea:-ms-input-placeholder {
+        color: $color;
+    }
+}
+@mixin noselect() {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+// $container-width: 1104;
+$num-columns:     18;
+$column-width:    40;
+$gutter-width:    16;
+$container-width: ($column-width * $num-columns) +  ($gutter-width * $num-columns) - $gutter-width;
+
+// $wrap: ($col-width * $col-qty) + $gutter * ($col-qty - 1);
+
+$container-px-width:  $container-width * 1px;
+$column-px-width:     $column-width * 1px;
+$gutter-px-width:     $gutter-width * 1px;
+
+$column-pct-width:    ($column-width / $container-width) * 100%;
+$gutter-pct-width:    ($gutter-width / $container-width) * 100%;
+
+@mixin container {
+  width: 96%;
+  max-width: ($column-px-width * $num-columns) + $gutter-px-width * ($num-columns - 1);
+  // max-width: $container-px-width + $gutter-px-width;
+  margin: 0 auto;
+  &:after {
+        content: " ";
+        clear: both;
+    }
+}
+
+// IE7 inline-block
+// ----------------
+@mixin ie7-inline-block() {
+  *display: inline; /* IE7 inline-block hack */
+  *zoom: 1;
+}
+
+// IE7 likes to collapse whitespace on either side of the inline-block elements.
+// Ems because we're attempting to match the width of a space character. Left
+// version is for form buttons, which typically come after other elements, and
+// right version is for icons, which come before. Applying both is ok, but it will
+// mean that space between those elements will be .6em (~2 space characters) in IE7,
+// instead of the 1 space in other browsers.
+@mixin ie7-restore-left-whitespace() {
+  *margin-left: .3em;
+
+  &:first-child {
+    *margin-left: 0;
+  }
+}
+
+@mixin ie7-restore-right-whitespace() {
+  *margin-right: .3em;
+}
+
+// Horizontal dividers
+// -------------------------
+// Dividers (basically an hr) within dropdowns and nav lists
+@mixin nav-divider($top: #e5e5e5, $bottom: $white) {
+  // IE7 needs a set width since we gave a height. Restricting just
+  // to IE7 to keep the 1px left/right space in other browsers.
+  // It is unclear where IE is getting the extra space that we need
+  // to negative-margin away, but so it goes.
+  *width: 100%;
+  height: 1px;
+  margin: (($baseLineHeight / 2) - 1) 1px; // 8px 1px
+  *margin: -5px 0 5px;
+  overflow: hidden;
+  background-color: $top;
+  border-bottom: 1px solid $bottom;
+}
+
+@mixin gradientBar($primaryColor, $secondaryColor, $textColor: #fff, $textShadow: 0 -1px 0 rgba(0,0,0,.25)) {
+  color: $textColor;
+  text-shadow: $textShadow;
+  @include gradient-vertical($primaryColor, $secondaryColor);
+  border-color: $secondaryColor $secondaryColor darken($secondaryColor, 15%);
+  border-color: rgba(0,0,0,.1) rgba(0,0,0,.1) fade-in(rgba(0,0,0,.1), 0.15);
+}
+
+@mixin gradient-vertical($startColor: #555, $endColor: #333) {
+  background-color: mix($startColor, $endColor, 60%);
+  background-image: -moz-linear-gradient(top, $startColor, $endColor); // FF 3.6+
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from($startColor), to($endColor)); // Safari 4+, Chrome 2+
+  background-image: -webkit-linear-gradient(top, $startColor, $endColor); // Safari 5.1+, Chrome 10+
+  background-image: -o-linear-gradient(top, $startColor, $endColor); // Opera 11.10
+  background-image: linear-gradient(to bottom, $startColor, $endColor); // Standard, IE10
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($startColor)}', endColorstr='#{ie-hex-str($endColor)}', GradientType=0); // IE9 and down
+}
+
+// Reset filters for IE
+@mixin reset-filter() {
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+
+@mixin buttonBackground($startColor, $endColor, $textColor: #fff, $textShadow: 0 -1px 0 rgba(0,0,0,.25)) {
+  // gradientBar will set the background to a pleasing blend of these, to support IE<=9
+  @include gradientBar($startColor, $endColor, $textColor, $textShadow);
+  *background-color: $endColor; /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+  @include reset-filter();
+
+  // in these cases the gradient won't cover the background, so we override
+  &:hover, &:focus, &:active, &.active, &.disabled, &[disabled] {
+    color: $textColor;
+    background-color: $endColor;
+    *background-color: darken($endColor, 5%);
+  }
+
+  // IE 7 + 8 can't handle box-shadow to show active, so we darken a bit ourselves
+  &:active,
+  &.active {
+    background-color: darken($endColor, 10%) \9;
+  }
+}
+
+// @for $i from 2 through $col-qty {
+//     .col#{$i} {
+//         width: ($col-width * $i) + ($gutter * $i) - $gutter;
+//         float: left;
+//         margin: 0 $gutter/2;
+//     }
+// }
+
+@mixin cols($i:$num-columns) {
+  width: ($column-pct-width * $i) + ($gutter-pct-width * $i) - ($gutter-pct-width * 1.5);
+  margin: 0 $gutter-pct-width/2;
+  float: left;
+  // margin-bottom: 2em;
+}
+
+@mixin pre($i) {
+  margin-left: ($column-pct-width * $i) + ($gutter-pct-width * $i);
+}
+
+@mixin suf($i) {
+  margin-right: ($column-pct-width * $i) + ($gutter-pct-width * $i);
+}

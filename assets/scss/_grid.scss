@@ -1,0 +1,116 @@
+.wrap {
+  overflow: hidden;
+  width: 100%;
+}
+
+.container {
+  @include container;
+}
+
+.col1{
+  @include cols(1);
+}
+
+.col3{
+  @include cols(3);
+}
+
+.col4{
+  @include cols(4);
+}
+
+.col5{
+  @include cols(5);
+}
+
+.col6{
+  @include cols(6);
+}
+
+.col7{
+  @include cols(7);
+}
+
+.col8{
+  @include cols(8);
+}
+
+.col9{
+  @include cols(9);
+}
+
+.col10{
+  @include cols(10);
+}
+
+.col12{
+  @include cols(12);
+}
+
+.col14{
+  @include cols(14);
+}
+
+.col16{
+  @include cols(16);
+}
+
+.full{
+  width: 100% - $gutter-pct-width;
+  margin: 0 $gutter-pct-width/2;
+}
+
+.thirds{
+  width: 33.33333%;
+  float: left;
+}
+
+.quarter {
+  width: 25%;
+  float:left;
+}
+
+.half{
+  width: 50%;
+  float:left;
+}
+
+.pre1{
+  @include pre(1);
+}
+
+.pre2{
+  @include pre(2);
+}
+
+.pre3{
+  @include pre(3);
+}
+
+.suf1{
+  @include suf(1);
+}
+
+.suf2{
+  @include suf(2);
+}
+
+.suf3{
+  @include suf(3);
+}
+
+.alpha {
+  margin-left: 0 !important;
+}
+.omega {
+  margin-right: 0 !important;
+}
+.clear {
+    clear: both;
+}
+
+.center {
+  float: none;
+  margin: 0 auto;
+  clear: both;
+}

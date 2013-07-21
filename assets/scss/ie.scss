@@ -1,0 +1,53 @@
+@import "vars";
+@import "mixins";
+@import "compass/css3";
+
+// Import all sections and common files from desk folder
+@import "grid";
+@import "medium/base";
+
+@import "large/base";
+
+// Home
+.path-box:hover,
+.prop-title {
+	border: 1px solid #ddd;
+}
+
+#prop-details td{
+	padding-left: 8px;
+}
+
+#articles {
+	.entry{
+		z-index: 1;
+
+		&:hover {
+			z-index: 10;
+			a {
+				border: 1px solid #777;
+			}
+		}
+
+	}
+}
+
+.reveal-modal {
+  padding: 60px;
+  top: 6.25em !important; 
+  left: 50%;
+  z-index: 99;
+  height: auto;
+  margin-left: -393px;
+  width: 786px;
+}
+
+.form-left,
+.form-right {
+  width: 50%;
+  float: left;
+}
+
+.form-left {
+  padding-right: 16px;
+}

@@ -1,0 +1,235 @@
+@import "vars";
+@import "mixins";
+
+.mobile{
+    display: none;
+  }
+
+body{
+  font-size: 16px;
+}
+
+@import "nav";
+@import "home";
+@import "culture";
+@import "services";
+@import "property";
+
+.hero{
+  padding: 0;
+  max-height: 490px;
+
+}
+
+.btn{
+  font-size: 0.625em;
+}
+
+.article-meta{
+  font-size: 0.625em; 
+}
+
+#footer{
+  .container{
+    padding: 40px 0;
+  }
+  .nav{
+    float: left;
+    li{
+      @include inline-block;
+      font-family: $sans_serif;
+      font-size: 0.625em;
+      margin: 0 15px 0 0;
+    }
+    a{
+      color: #aaaaaa;
+      &:hover{
+        color: #fff;
+      }
+    }
+  }
+  .brand{
+    width: 52px;
+    height: 52px;
+    background-size: 52px 52px;
+    float: right;
+  }
+}
+
+.blog {
+  #spotlight {
+    padding-top: 2.016129%;
+  }
+}
+
+#articles {
+  article a{
+    margin-left: -1px;
+    // &:hover{
+    //  h1{
+    //    text-decoration: underline;
+    //  }
+    // }
+  }
+}
+
+.single-post {
+
+  article .container{
+    padding-top: 8%;
+  }
+
+  #loader {
+    display: none;
+    width: 100%;
+    height: 16px;
+    background: url(#{$img}/wpspin_light.gif) 50% 50% no-repeat;
+  }
+
+  #s-head{
+    position: relative;
+    margin-bottom: 20px;
+
+    label, input {
+      font-family: $sans_serif;
+      text-transform: uppercase;
+      font-size: 10px;
+    }
+    label {
+      position: absolute;
+      left: 15px;
+      top: 10px;
+      z-index: 2;
+      color: #777;
+    }
+    input {
+      color: $black;
+      padding: 10px 15px;
+      position: relative;
+      z-index: 1;
+      border: 1px solid #d3d3d3;
+      @include border-radius(3px);
+      width: 100%;
+    }
+  }
+
+  .article-nav{
+    height: 550px;
+    overflow-y: scroll;
+  
+    li{
+      line-height: 1.2;
+      
+      h1, h2{
+        padding: 0;
+      }
+
+      h2{
+        font-size: 9px;
+        letter-spacing: 1px;
+        color: #777777;
+      }
+      
+      a{
+        color: $black;
+        text-decoration: none;
+        padding: 20px 10px;
+        display: block;
+        @include transition(all 220ms);
+        border-bottom: 1px solid white;
+        &:hover{
+          background-color: #fafafa;
+          border-color: #eee;
+        }
+      }
+
+    }
+
+  }
+
+}
+
+.socialIcn{
+
+
+  a {
+    box-sizing: content-box;
+    height: 16px;
+    width: 16px;
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    padding: 4px;
+    @include opacity(.85);
+
+    &:hover {
+      @include opacity(1);
+    }
+
+  }
+  
+  &.icn-linkedin{
+    margin-left: 2px !important;
+  }
+
+  &.icn-pinterest {
+    margin-right: 2px !important;
+  }
+
+  &.icn-pinterest a {
+    background-image: url(#{$img}/icon-pinterest.png);
+  }
+
+  &.icn-linkedin a {
+    background-image: url(#{$img}/icon-linkedin.png);
+  }
+
+}
+
+// Contact form
+.form {
+  margin: 0 0 20px 0;
+}
+
+/* 
+  Required Styles
+*/
+#aToolTip {
+  position: absolute;
+  display: none;
+  z-index: 50000;
+}
+
+  #aToolTip .aToolTipContent {
+    position:relative;
+    margin:0;
+    padding:0;
+  }
+/* 
+  END: Required Styles
+*/
+/**
+  Default Theme
+*/
+.defaultTheme {
+  border:1px solid #ccc;
+  background:$white;
+  background: rgba(255,255,255,.95);
+  color: #000;
+  font-size: 9px;
+  font-family: $sans_serif;
+  margin:0;
+  padding:2px; 
+  width:auto;
+  @include border-radius(2px 2px 2px 0);
+  }
+
+.svg {
+  .icn-pinterest a {
+    background-image: url(#{$img}/icon-pinterest.svgz);
+  }
+
+  .icn-linkedin a {
+    background-image: url(#{$img}/icon-linkedin.svgz);
+  }
+}

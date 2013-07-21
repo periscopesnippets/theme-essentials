@@ -1,0 +1,35 @@
+@import "vars";
+@import "mixins";
+@import "compass/css3";
+
+@media (min-width: 120px) and (max-width: 599px) {
+
+	@import "small/base";
+
+}
+@media (min-width: 600px) {
+
+	@import "grid";
+	@import "medium/base";
+
+}
+@media (min-width: 768px) {
+	
+	// @import "grid";
+	@import "large/base";
+
+}
+
+@media (min-width: 599px) and (max-width: 750px) {
+  
+  .single-property {
+
+    .col7,
+    .col10 {
+      width: 80%;
+      float: none;
+    }
+
+  }
+
+}
