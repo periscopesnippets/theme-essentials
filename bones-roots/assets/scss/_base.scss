@@ -1,0 +1,251 @@
+/*********************
+GENERAL STYLES
+*********************/
+
+body {
+	font-family: $serif;
+	font-size: 100%;
+	line-height: 1.5;
+	color: #565656;
+}
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+
+.wrap {
+	width: 96%;
+	margin: 0 auto;
+}
+
+/*********************
+HEADER STYLES
+*********************/
+
+.header {}
+
+	#logo {}
+
+/*********************
+NAVIGATION STYLES
+*********************/
+
+.nav {
+	border: 1px solid #ccc;
+	border-bottom: 0;
+
+	li {
+
+		a {
+			display: block;
+			text-decoration: none;
+			padding: 10px 10px;
+			background-color: #eee;
+			border-bottom: 1px solid #ccc;
+
+			&:hover, &:focus {
+
+			}
+		}
+
+		&:first-child {}
+
+		&:last-child {}
+
+		ul.sub-menu,
+		ul.children {
+
+			li {
+
+				a {
+					padding-left: 30px;
+
+					&:hover,
+					&:focus {}
+
+					&:link {}
+
+				}
+
+				&:first-child {}
+
+				&:last-child {}
+
+			}
+
+		}
+
+	} /* end .menu li */
+
+	/* highlight current page */
+	li.current-menu-item,
+	li.current_page_item,
+	li.current-page-ancestor {
+
+		a {}
+
+	}  /* end current highlighters */
+
+} /* end .nav */
+
+
+		/* entry content */
+		.entry-content {
+
+			blockquote {
+
+				&:before {}
+
+			}
+
+			img {
+				margin: 0 0 1.5em 0;
+				max-width: 100%;
+				height: auto;
+			}
+
+			video, object {
+				max-width: 100%;
+				height: auto;
+			}
+
+			pre {
+				background: #eee;
+				border: 1px solid #cecece;
+				padding: 10px;
+			}
+
+		} /* end .entry-content */
+
+		.wp-caption {
+			max-width: 100%;
+			background: #eee;
+			padding: 5px;
+
+			/* images inside wp-caption */
+			img {
+				max-width: 100%;
+				margin-bottom: 0;
+				width: 100%;
+			}
+
+			p.wp-caption-text {
+				font-size: 0.85em;
+				margin: 4px 0 7px;
+				text-align: center;
+			}
+
+		} /* end .wp-caption */
+
+
+/******************************************************************
+PAGE NAVI STYLES
+******************************************************************/
+
+.page-navigation,
+.wp-prev-next {
+	margin: 1.1em 0 2.2em;
+}
+	.bones_page_navi {
+
+		li {
+			float: left;
+			margin-left: 10px;
+
+			a {
+				padding: 3px 6px;
+				display: block;
+				text-decoration: none;
+				position: relative;
+
+				&:hover,
+				&:focus {
+					color: #f01d4f;
+					text-decoration: underline;
+				}
+			}
+
+		}
+
+		/* current page link */
+		li.bpn-current {
+			padding: 3px 6px;
+			border-bottom: 2px solid #f01d4f;
+			position: relative;
+
+			a {
+				/* hovering on current page link */
+				&:hover,
+				&:focus {}
+
+			}
+
+		} /* end .bones_page_navi .bpn-current */
+
+		/* common styles for page-navi links */
+		li.bpn-prev-link,
+		li.bpn-next-link {
+			font-weight: 700;
+
+			a {
+				padding: 0;
+			}
+		}
+
+		/* remove the bg on end links */
+		li.bpn-prev-link a:hover,
+		li.bpn-next-link a:hover,
+		li.bpn-first-page-link a:hover,
+		li.bpn-last-page-link a:hover {
+			background: none;
+		}
+
+		/* previous link */
+		li.bpn-prev-link {
+			a {
+				&:hover,
+				&:focus {}
+			}
+		}
+
+		/* next page link */
+		li.bpn-next-link {
+			a {
+				&:hover,
+				&:focus {}
+			}
+		}
+
+		/* first page link */
+		li.bpn-first-page-link {
+			a {
+				&:hover,
+				&:focus {}
+			}
+		}
+
+		/* last page link */
+		li.bpn-last-page-link {
+			a {
+				&:hover,
+				&:focus {}
+			}
+		}
+
+	} /* end .bones_page_navi */
+
+	/* fallback previous & next links */
+	.wp-prev-next {
+
+		ul {}
+
+		.prev-link {
+			float: left;
+		}
+
+		.next-link {
+			float: right;
+		}
+
+	} /* end .wp-prev-next */
+

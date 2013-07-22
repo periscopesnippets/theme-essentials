@@ -21,4 +21,8 @@ nbproject
 *.sublime-project
 *.sublime-workspace
 
+# ignore unused theme files
+_unused
+
+# Node
 node_modules

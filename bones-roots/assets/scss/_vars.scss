@@ -1,0 +1,94 @@
+// COLORS
+$highlight:					#d4c7a1;
+
+$error:             #FF0000;
+$error_bg: 		    	#FFE5E5;
+
+$success: 		    	#339900;
+$success_bg: 	    	#EAF5E5;
+
+$info: 			    		#3399FF;
+$info_bg: 		    	#EAF5FF;
+
+$warning: 					#FFFF00;
+$warning_bg: 				#FFFFE5;
+
+$black:             #161818;
+$grayLight:             #999 !default;
+$grayLighter:				#fcfcfc;
+$gray: 							#e7e7e7;
+$grayDark: 					#222 !default;
+$white:             #fff;
+$text:              #161818;
+$title:							#161818;
+
+$alert-yellow:      #ebe16f;
+$alert-red:         #fbe3e4;
+$alert-green:       #e6efc2;
+$alert-blue:        #d5edf8;
+
+$black:             #000;
+$white:             #fff;
+
+$linkColor: 				#977f39;
+$linkColorHover:    darken($linkColor, 10%);
+
+$btnBackground: 					$white !default;
+// $btnBackgroundHighlight: 	darken($white, 10%) !default;
+
+$baseBorderRadius:      4px !default;
+$borderRadiusLarge:     6px !default;
+$borderRadiusSmall:     3px !default;
+
+// Buttons
+// -------------------------
+$btnBackground:                     $white !default;
+$btnBackgroundHighlight:            darken($white, 10%) !default;
+$btnBorder:                         #ccc !default;
+
+$btnPrimaryBackground:              $linkColor !default;
+$btnPrimaryBackgroundHighlight:     adjust-hue($btnPrimaryBackground, 20%) !default;
+
+// Dropdowns
+// -------------------------
+$dropdownBackground:            $white !default;
+$dropdownBorder:                rgba(0,0,0,.2) !default;
+$dropdownDividerTop:            #e5e5e5 !default;
+$dropdownDividerBottom:         $white !default;
+
+$dropdownLinkColor:             $grayDark !default;
+$dropdownLinkColorHover:        $white !default;
+$dropdownLinkColorActive:       $white !default;
+
+$dropdownLinkBackgroundActive:  #0081c2 !default;
+$dropdownLinkBackgroundHover:   $dropdownLinkBackgroundActive !default;
+
+
+
+// COMPONENT VARIABLES
+// --------------------------------------------------
+
+
+// Z-index master list
+// -------------------------
+// Used for a bird's eye view of components dependent on the z-axis
+// Try to avoid customizing these :)
+$zindexDropdown:          1000 !default;
+$zindexPopover:           1010 !default;
+$zindexTooltip:           1030 !default;
+$zindexFixedNavbar:       1030 !default;
+$zindexModalBackdrop:     1040 !default;
+$zindexModal:             1050 !default;
+
+$baseLineHeight:        20px !default;
+
+
+
+// IMAGES
+$img: 		    	"../img";
+$sprite: 		    "../img/sprite.png";
+$font_dir: 		    "../fonts";
+	
+// TYPOGRAPHY
+$serif: "Walbaum", serif;
+$sans-serif: "TradeGothicExt", sans-serif;

@@ -1,0 +1,482 @@
+/* import mixins */
+/* line 2, ../scss/_mixins.scss */
+.clearfix {
+  zoom: 1;
+}
+/* line 4, ../scss/_mixins.scss */
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table;
+}
+/* line 5, ../scss/_mixins.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* line 9, ../scss/_mixins.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  *behavior: url(/wp-content/themes/emdr-v2/assets/shivs/boxsizing.htc);
+}
+
+/* line 17, ../scss/_mixins.scss */
+.ir {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* line 1, ../scss/_grid.scss */
+.wrap {
+  overflow: hidden;
+  width: 100%;
+}
+
+/* line 6, ../scss/_grid.scss */
+.container {
+  width: 96%;
+  max-width: 992px;
+  margin: 0 auto;
+}
+/* line 111, ../scss/_mixins.scss */
+.container:after {
+  content: " ";
+  clear: both;
+}
+
+/* line 10, ../scss/_grid.scss */
+.col1 {
+  width: 3.22581%;
+  margin: 0 0.80645%;
+  float: left;
+}
+
+/* line 14, ../scss/_grid.scss */
+.col3 {
+  width: 14.51613%;
+  margin: 0 0.80645%;
+  float: left;
+}
+
+/* line 18, ../scss/_grid.scss */
+.col4 {
+  width: 20.16129%;
+  margin: 0 0.80645%;
+  float: left;
+}
+
+/* line 22, ../scss/_grid.scss */
+.col5 {
+  width: 25.80645%;
+  margin: 0 0.80645%;
+  float: left;
+}
+
+/* line 26, ../scss/_grid.scss */
+.col6 {
+  width: 31.45161%;
+  margin: 0 0.80645%;
+  float: left;
+}
+
+/* line 30, ../scss/_grid.scss */
+.col7 {
+  width: 37.09677%;
+  margin: 0 0.80645%;
+  float: left;
+}
+
+/* line 34, ../scss/_grid.scss */
+.col8 {
+  width: 42.74194%;
+  margin: 0 0.80645%;
+  float: left;
+}
+
+/* line 38, ../scss/_grid.scss */
+.col9 {
+  width: 48.3871%;
+  margin: 0 0.80645%;
+  float: left;
+}
+
+/* line 42, ../scss/_grid.scss */
+.col10 {
+  width: 54.03226%;
+  margin: 0 0.80645%;
+  float: left;
+}
+
+/* line 46, ../scss/_grid.scss */
+.col12 {
+  width: 65.32258%;
+  margin: 0 0.80645%;
+  float: left;
+}
+
+/* line 50, ../scss/_grid.scss */
+.col14 {
+  width: 76.6129%;
+  margin: 0 0.80645%;
+  float: left;
+}
+
+/* line 54, ../scss/_grid.scss */
+.col16 {
+  width: 87.90323%;
+  margin: 0 0.80645%;
+  float: left;
+}
+
+/* line 58, ../scss/_grid.scss */
+.full {
+  width: 98.3871%;
+  margin: 0 0.80645%;
+}
+
+/* line 63, ../scss/_grid.scss */
+.thirds {
+  width: 33.33333%;
+  float: left;
+}
+
+/* line 68, ../scss/_grid.scss */
+.quarter {
+  width: 25%;
+  float: left;
+}
+
+/* line 73, ../scss/_grid.scss */
+.half {
+  width: 50%;
+  float: left;
+}
+
+/* line 78, ../scss/_grid.scss */
+.pre1 {
+  margin-left: 5.64516%;
+}
+
+/* line 82, ../scss/_grid.scss */
+.pre2 {
+  margin-left: 11.29032%;
+}
+
+/* line 86, ../scss/_grid.scss */
+.pre3 {
+  margin-left: 16.93548%;
+}
+
+/* line 90, ../scss/_grid.scss */
+.suf1 {
+  margin-right: 5.64516%;
+}
+
+/* line 94, ../scss/_grid.scss */
+.suf2 {
+  margin-right: 11.29032%;
+}
+
+/* line 98, ../scss/_grid.scss */
+.suf3 {
+  margin-right: 16.93548%;
+}
+
+/* line 102, ../scss/_grid.scss */
+.alpha {
+  margin-left: 0 !important;
+}
+
+/* line 105, ../scss/_grid.scss */
+.omega {
+  margin-right: 0 !important;
+}
+
+/* line 108, ../scss/_grid.scss */
+.clear {
+  clear: both;
+}
+
+/* line 112, ../scss/_grid.scss */
+.center {
+  float: none;
+  margin: 0 auto;
+  clear: both;
+}
+
+/******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: 481px and Up Stylesheet
+
+This stylesheet is loaded for larger devices. It's set to 
+481px because at 480px it would load on a landscaped iPhone.
+This isn't ideal because then you would be loading all those
+extra styles on that same mobile connection. 
+
+A word of warning. This size COULD be a larger mobile device,
+so you still want to keep it pretty light and simply expand
+upon your base.scss styles.
+
+******************************************************************/
+/*********************
+NAVIGATION STYLES
+*********************/
+/* .menu is clearfixed inside mixins.scss */
+/* line 27, ../scss/_481up.scss */
+.menu {
+  /* end .menu ul */
+}
+/* line 28, ../scss/_481up.scss */
+.menu ul {
+  /* end .menu ul li */
+  /* highlight current page */
+  /* end current highlighters */
+}
+/* line 29, ../scss/_481up.scss */
+.menu ul li {
+  /*
+  plan your menus and drop-downs wisely.
+  */
+}
+/* line 30, ../scss/_481up.scss */
+.menu ul li a {
+  /*
+  you can use hover styles here even though this size
+  has the possibility of being a mobile device.
+  */
+}
+
+/* end .menu */
+/*********************
+POSTS & CONTENT STYLES
+*********************/
+/* entry content */
+/* line 75, ../scss/_481up.scss */
+.entry-content {
+  /* at this larger size, we can start to align images */
+}
+/* line 79, ../scss/_481up.scss */
+.entry-content .alignleft, .entry-content img.alignleft {
+  margin-right: 1.5em;
+  display: inline;
+  float: left;
+}
+/* line 84, ../scss/_481up.scss */
+.entry-content .alignright, .entry-content img.alignright {
+  margin-left: 1.5em;
+  display: inline;
+  float: right;
+}
+/* line 89, ../scss/_481up.scss */
+.entry-content .aligncenter, .entry-content img.aligncenter {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  clear: both;
+}
+
+/* end .entry-content */
+/*********************
+FOOTER STYLES
+*********************/
+/*
+check your menus here. do they look good?
+do they need tweaking?
+*/
+/* end .footer-links */
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Tablet & Small Desktop Stylesheet
+
+Here's where you can start getting into the good stuff.
+This size will work on iPads, other tablets, and desktops.
+So you can start working with more styles, background images,
+and other resources. You'll also notice the grid starts to
+come into play. Have fun!
+
+******************************************************************/
+/*********************
+GENERAL STYLES
+*********************/
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+/* line 26, ../scss/_768up.scss */
+.wrap {
+  max-width: 1140px;
+}
+
+/*********************
+HEADER STYLES
+*********************/
+/*********************
+NAVIGATION STYLES
+*********************/
+/* line 42, ../scss/_768up.scss */
+.nav {
+  background: #eee;
+  border: 0;
+  /* end .menu ul li */
+  /* highlight current page */
+  /* end current highlighters */
+}
+/* line 46, ../scss/_768up.scss */
+.nav li {
+  float: left;
+  position: relative;
+  /*
+  plan your menus and drop-downs wisely.
+  */
+  /* showing sub-menus */
+}
+/* line 50, ../scss/_768up.scss */
+.nav li a {
+  border-bottom: 0;
+  /*
+  you can use hover styles here even though this size
+  has the possibility of being a mobile device.
+  */
+}
+/* line 57, ../scss/_768up.scss */
+.nav li a:hover, .nav li a:focus {
+  background-color: #dedede;
+}
+/* line 70, ../scss/_768up.scss */
+.nav li ul.sub-menu,
+.nav li ul.children {
+  margin-top: 0;
+  border: 1px solid #cccccc;
+  border-top: 0;
+  position: absolute;
+  display: none;
+  z-index: 8999;
+  /* highlight sub-menu current page */
+}
+/* line 78, ../scss/_768up.scss */
+.nav li ul.sub-menu li,
+.nav li ul.children li {
+  /*
+  if you need to go deeper, go nuts
+  just remember deeper menus suck
+  for usability. k, bai.
+  */
+}
+/* line 80, ../scss/_768up.scss */
+.nav li ul.sub-menu li a,
+.nav li ul.children li a {
+  padding-left: 10px;
+  border-right: 0;
+  display: block;
+  width: 180px;
+  border-bottom: 1px solid #cccccc;
+}
+/* line 97, ../scss/_768up.scss */
+.nav li ul.sub-menu li:last-child a,
+.nav li ul.children li:last-child a {
+  border-bottom: 0;
+}
+/* line 119, ../scss/_768up.scss */
+.nav li:hover ul {
+  top: auto;
+  display: block;
+}
+
+/* end .nav */
+/*********************
+SIDEBARS & ASIDES
+*********************/
+/* line 139, ../scss/_768up.scss */
+.sidebar {
+  margin-top: 2.2em;
+}
+
+/* line 143, ../scss/_768up.scss */
+.widgettitle {
+  border-bottom: 2px solid #444444;
+  margin-bottom: 0.75em;
+}
+
+/* line 148, ../scss/_768up.scss */
+.widget {
+  padding: 0 10px;
+  margin: 2.2em 0;
+}
+/* line 153, ../scss/_768up.scss */
+.widget ul li {
+  margin-bottom: 0.75em;
+  /* deep nesting */
+}
+/* line 161, ../scss/_768up.scss */
+.widget ul li ul {
+  margin-top: 0.75em;
+  padding-left: 1em;
+}
+
+/* links widget */
+/* meta widget */
+/* pages widget */
+/* recent-posts widget */
+/* archives widget */
+/* tag-cloud widget */
+/* calendar widget */
+/* category widget */
+/* recent-comments widget */
+/* search widget */
+/* text widget */
+/*********************
+FOOTER STYLES
+*********************/
+/*
+you'll probably need to do quite a bit
+of overriding here if you styled them for
+mobile. Make sure to double check these!
+*/
+/* line 269, ../scss/_768up.scss */
+.footer-links ul li {
+  /*
+  be careful with the depth of your menus.
+  it's very rare to have multi-depth menus in
+  the footer.
+  */
+}
+
+/* end .footer-links */
+/******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: Desktop Stylsheet
+
+This is the desktop size. It's larger than an iPad so it will only
+be seen on the Desktop. 
+
+******************************************************************/
+/* 
+you can call the larger styles if you want, but there's really no need 
+*/
+/******************************************************************
+ADDITIONAL IE FIXES
+These fixes are now ONLY seen by IE, so you don't have to worry
+about using prefixes, although it's best practice. For more info
+on using Modernizr classes, check out this link:
+http://www.modernizr.com/docs/
+******************************************************************/
+/*
+For example, you can use something like:
+
+.no-textshadow .class { ... }
+
+You can also target specific versions by using the classes applied to
+the html element. These can sometimes change, so take a look inside the
+header.php file to see what they are:
+
+
+.lt-ie8 .class { ... }
+
+*/
